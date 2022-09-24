@@ -1,5 +1,5 @@
 import React from 'react';
-import Yt from "./assets/youtube.png";
+import Yt from './assets/youtube.png';
 
 class Searchbar extends React.Component {
     handleChange = (event) => {
