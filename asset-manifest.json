@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/YT_CLONE/static/css/main.4c231cb1.css",
+    "main.js": "/YT_CLONE/static/js/main.220c165b.js",
+    "static/media/nav_bg.jpg": "/YT_CLONE/static/media/nav_bg.81d89fd018c81a6149fc.jpg",
+    "index.html": "/YT_CLONE/index.html",
+    "main.4c231cb1.css.map": "/YT_CLONE/static/css/main.4c231cb1.css.map",
+    "main.220c165b.js.map": "/YT_CLONE/static/js/main.220c165b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c231cb1.css",
+    "static/js/main.220c165b.js"
+  ]
+}
