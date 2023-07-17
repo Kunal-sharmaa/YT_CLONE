@@ -3,11 +3,13 @@ import SearchBar from './Searchbar';
 import youtube from '../apis/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
+import { string } from 'prop-types';
 
 class App extends React.Component {
     state = {
         videos: [],
-        selectedVideo: null
+        selectedVideo: null,
+        country: string
     }
     handleSubmit = async (termFromSearchBar) => {
         const response = await youtube.get('/search', {
@@ -29,14 +31,14 @@ class App extends React.Component {
         
         return (
             
-            <div className='ui container' style={{marginTop: '1em'}}>
+            <div>
                 <SearchBar handleFormSubmit={this.handleSubmit}/>
-                <div className='ui grid'>
-                    <div className="ui row">
-                        <div className="eleven wide column">
-                            <VideoDetail video={this.state.selectedVideo}/>
+                <div >
+                    <div >
+                        <div >
+                            <VideoDetail video={this.state.selectedVideo}/> 
                         </div>
-                        <div className="five wide column">
+                        <div >
                             <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
                         </div>
                     </div>

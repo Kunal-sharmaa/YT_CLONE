@@ -1,13 +1,16 @@
 import React from 'react';
-import Yt from '../assets/youtube.png';
-
+import logo from '../components/assets/youtube.png';
+import '../style/video.css';
+ 
 class Searchbar extends React.Component {
-    handleChange = (event) => {
+    //search element is here in term.
+    handleChange = (event) => { //getting the event
         this.setState({
             term: event.target.value
         });
     
     };
+    //submitting 
     handleSubmit = event => {
         event.preventDefault();
         this.props.handleFormSubmit(this.state.term);
@@ -17,18 +20,17 @@ class Searchbar extends React.Component {
     render() {
         
         return (
-            <div className="">
-            <h2  style={{textAlign:"center"}}><img style={{width:'200px', height:'100px',justifyContent:'center'}} src={Yt} alt="youtube logo"></img></h2>
-            <div className='search-bar ui segment'>
-                <form onSubmit={this.handleSubmit} className='ui form'>
-                    <div className='field'>
-                        <label htmlFor="video-search">Video Search</label>
-                        <input onChange={this.handleChange} name='video-search' type="text" placeholder="Search.."/>
-                    </div>
-                </form>
+            <div className="container">
+                <div className="logo">
+                    <h2  style={{height:'100px'}} className=""><img src={logo} style={{width:'150px', height:'100px',justifyContent:'center'}}  alt="youtube logo"></img></h2>
+                </div>
+                <div className="search-bar">
+                    <form onSubmit={this.handleSubmit} className='ui-form'>
+                        <input onChange={this.handleChange} className='video-search' type="text" placeholder="Search.."/>
+                        <label htmlFor="video-search" class="button">Search</label>
+                    </form>
+                </div>
             </div>
-            </div>
-            
         )
     }
 }

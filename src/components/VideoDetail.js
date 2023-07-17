@@ -30,6 +30,7 @@ const VideoDetail = ({ video }) => {
       </div>
       <div className="ui segment">
         <h4 className="ui header">{video.snippet.title}</h4>
+        {/* <h4>{video.snippet.contenDetails.relatedPlaylists.likes}</h4> */}
         <p>{video.snippet.description}</p>
       </div>
       <div>
