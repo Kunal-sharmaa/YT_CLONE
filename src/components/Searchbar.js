@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../components/assets/youtube.png';
-import '../style/video.css';
- 
+import '../style/app.css';
+import { Button } from '@mui/base/Button';
 class Searchbar extends React.Component {
     //search element is here in term.
     handleChange = (event) => { //getting the event
@@ -20,17 +20,17 @@ class Searchbar extends React.Component {
     render() {
         
         return (
-            <div className="container">
-                <div className="logo">
-                    <h2  style={{height:'100px'}} className=""><img src={logo} style={{width:'150px', height:'100px',justifyContent:'center'}}  alt="youtube logo"></img></h2>
+            <nav className="container">
+                <div>
+                    <img src={logo} style={{width:'120px', height:'80px',justifyContent:'center'}}  alt="youtube logo"></img>
                 </div>
                 <div className="search-bar">
                     <form onSubmit={this.handleSubmit} className='ui-form'>
-                        <input onChange={this.handleChange} className='video-search' type="text" placeholder="Search.."/>
-                        <label htmlFor="video-search" class="button">Search</label>
+                        <input onChange={this.handleChange} className='search' type="text" placeholder="Search.."/>
+                        <Button className='btn'><i class="bi bi-search"></i></Button>
                     </form>
                 </div>
-            </div>
+            </nav>
         )
     }
 }

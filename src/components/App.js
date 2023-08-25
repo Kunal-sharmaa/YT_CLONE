@@ -4,6 +4,7 @@ import youtube from '../apis/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 import { string } from 'prop-types';
+import './../style/video.css';
 
 class App extends React.Component {
     state = {
@@ -31,19 +32,15 @@ class App extends React.Component {
         
         return (
             
-            <div>
+            <>
                 <SearchBar handleFormSubmit={this.handleSubmit}/>
-                <div >
-                    <div >
-                        <div >
+                
                             <VideoDetail video={this.state.selectedVideo}/> 
-                        </div>
-                        <div >
+                        
                             <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        
+                
+            </>
             
         )
     }

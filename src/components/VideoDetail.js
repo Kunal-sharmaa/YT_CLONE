@@ -23,8 +23,6 @@ const VideoDetail = ({ video }) => {
   console.log(typeof video);
   return (
     <div>
-      
-      
       <div className="ui embed">
         <iframe src={videoSrc} allowFullScreen title="Video player" />
       </div>
